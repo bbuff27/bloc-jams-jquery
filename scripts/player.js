@@ -16,6 +16,8 @@ class Player {
 
   playPause (song = this.currentlyPlaying) {
     if (this.currentlyPlaying !== song) {
+
+      $("button#play-pause").attr("playState", player.playState);
       // Stop the currently playing sound file (even if nothing is playing)
       this.soundObject.stop();
       // Clear classes on the song that's currently playing
